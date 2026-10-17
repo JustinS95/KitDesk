@@ -1,0 +1,7 @@
+# Canonical local stories
+
+This is the single local story store for KitDesk. It was empty at setup and is now populated, including canonical [KD-ST-001 v2](KD-ST-001-book-available-equipment.md). Use the [expanded backlog index](EXPANDED_BACKLOG.md) to navigate the current stories and their individual authority, open questions and readiness limits; do not infer a Ready state from document completeness. Plain Markdown is sufficient; no UUID registry is adopted.
+
+Original KD-ST-001 was published as [Issue #1](https://github.com/JustinS95/KitDesk/issues/1); a 2026-10-17 checkpoint retained only in the original local workspace records verified Project 3 membership in Backlog, without local identity writeback. This publication derivative replaces the private/local checkpoint link; see [publication notes](../../PUBLICATION_NOTES.md). That scoped record is not a mapping or Issue-publication claim for every story, nor live synchronization or current board-state verification. Extension candidates use [review-pending synthetic premises](../../sources/expansion-01/README.md), not fabricated business approval. Start the walkthrough in [DEMO_GUIDE.md](../../DEMO_GUIDE.md).
+
+Use descriptive filenames and stable local references if needed. Keep criteria with their story. Draft child tasks only when requested. Do not confuse local references with real work-item IDs or assume a hierarchy from folder names.

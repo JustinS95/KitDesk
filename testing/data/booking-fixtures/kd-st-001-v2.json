@@ -1,0 +1,275 @@
+{
+  "fixture_pack_id": "FX-BKG-PACK-001",
+  "schema_version": "1.0",
+  "kind": "library_owned_portable_semantic_fixtures_not_application_schema",
+  "design_status": "test_design_not_execution",
+  "execution_status": "not_run",
+  "sources": {
+    "story_id": "KD-ST-001",
+    "story_version": 2,
+    "story_date": "2026-10-16",
+    "story_path": "../../../artifacts/stories/KD-ST-001-book-available-equipment.md",
+    "decision_paths": [
+      "../../../artifacts/discovery/Discovery_Summary_KitDesk_20261016.md",
+      "../../../artifacts/discovery/Booking_Decisions_AC_Trial_20261016.md",
+      "../../../artifacts/reviews/KD-ST-001-AC-refinement-proposal.md"
+    ],
+    "baseline_hash": null,
+    "baseline_hash_note": "No hash was available in the reviewed story/decision/review references; none computed or invented."
+  },
+  "premises": {
+    "fictional_only": true,
+    "isolated_scenarios": true,
+    "baseline_scope": "Only the baseline_booking_ids named by a scenario exist in that scenario; the catalog is not a shared seeded environment.",
+    "time_axis": "Hypothetical monotonic relative minutes. An interval array is [start_minute, end_minute], not a timestamp or an endpoint-inclusion rule. No business time zone, calendar validity, operating hours, DST or input precision is established.",
+    "contract_scenario_conditions": "For contract_backed scenarios only, requested intervals are assumed permitted and items otherwise available; only named reservation conflicts vary. These are conditional design premises, not approved date or condition policies.",
+    "membership": "Each persona supplies a selected hypothetical verification outcome for this scenario. This is not a live service check, policy enum, membership source, freshness rule or configured account.",
+    "identity_and_access": "Personas express member capabilities and booking ownership relationships, not installed roles, authentication or permissions identifiers.",
+    "privacy_probes": "Invented display names and example.invalid contact markers are comparison probes, never login identifiers or required product fields.",
+    "concurrency": "Concurrent submission is a semantic premise, not simulated or observed scheduling. No guaranteed winner, tie-break, retry policy, latency bound or liveness guarantee is asserted by the conflict oracle.",
+    "execution_gate": "Cannot seed or execute against an application without separately authorized adapters, authentication, known interfaces, environment and applicable policy decisions. No cleanup or seed commands are provided."
+  },
+  "personas": [
+    {"id": "FX-BKG-M-001", "display_name": "Ari Fixture", "contact_probe": "ari.fx-bkg@example.invalid", "membership_fixture_outcome": "verified_active", "relationship": "Primary member requesting own booking"},
+    {"id": "FX-BKG-M-002", "display_name": "Bell Fixture", "contact_probe": "bell.fx-bkg@example.invalid", "membership_fixture_outcome": "verified_active", "relationship": "Owner of baseline bookings; another borrower relative to Ari and Gavi"},
+    {"id": "FX-BKG-M-003", "display_name": "Corin Fixture", "contact_probe": "corin.fx-bkg@example.invalid", "membership_fixture_outcome": "verified_inactive", "relationship": "Member with isolated inactive-membership request"},
+    {"id": "FX-BKG-M-004", "display_name": "Daya Fixture", "contact_probe": "daya.fx-bkg@example.invalid", "membership_fixture_outcome": "cannot_verify", "relationship": "Member with isolated unverifiable-membership request"},
+    {"id": "FX-BKG-M-005", "display_name": "Elin Fixture", "contact_probe": "elin.fx-bkg@example.invalid", "membership_fixture_outcome": "verified_active", "relationship": "Independent eligible concurrent requester"},
+    {"id": "FX-BKG-M-006", "display_name": "Faro Fixture", "contact_probe": "faro.fx-bkg@example.invalid", "membership_fixture_outcome": "verified_active", "relationship": "Third eligible requester for mixed concurrent intervals"},
+    {"id": "FX-BKG-M-007", "display_name": "Gavi Fixture", "contact_probe": "gavi.fx-bkg@example.invalid", "membership_fixture_outcome": "verified_active", "relationship": "Non-owner attempting to view Bell's confirmation"},
+    {"id": "FX-BKG-M-008", "display_name": "Hali Fixture", "contact_probe": "hali.fx-bkg@example.invalid", "membership_fixture_outcome": "verified_active", "relationship": "Eligible member with explicitly absent hypothetical training evidence", "training_fixture_signal": "No training record supplied; not an application field or eligibility prerequisite"}
+  ],
+  "items": [
+    {"id": "FX-BKG-I-001", "display_name": "Amber cordless drill A", "physical_unit_note": "Individual unit; same fictional model as I-002"},
+    {"id": "FX-BKG-I-002", "display_name": "Amber cordless drill B", "physical_unit_note": "Different physical unit from I-001, not an alias"},
+    {"id": "FX-BKG-I-003", "display_name": "Lumen portable projector", "physical_unit_note": "Individual unit"},
+    {"id": "FX-BKG-I-004", "display_name": "Pebble orbital sander", "physical_unit_note": "Individual unit"},
+    {"id": "FX-BKG-I-005", "display_name": "Echo field recorder", "physical_unit_note": "Individual unit"},
+    {"id": "FX-BKG-I-006", "display_name": "Cedar staple gun", "physical_unit_note": "Individual unit for blocked condition exploration only", "condition_prompt": "Hypothetical damage report; no availability classification or clearance rule inferred"}
+  ],
+  "baseline_bookings": [
+    {"id": "FX-BKG-B-001", "owner_id": "FX-BKG-M-002", "item_id": "FX-BKG-I-001", "interval": [120, 180], "semantic_state": "confirmed_with_reservation"},
+    {"id": "FX-BKG-B-002", "owner_id": "FX-BKG-M-002", "item_id": "FX-BKG-I-003", "interval": [60, 120], "semantic_state": "confirmed_with_reservation"},
+    {"id": "FX-BKG-B-003", "owner_id": "FX-BKG-M-002", "item_id": "FX-BKG-I-003", "interval": [240, 300], "semantic_state": "confirmed_with_reservation"},
+    {"id": "FX-BKG-B-004", "owner_id": "FX-BKG-M-002", "item_id": "FX-BKG-I-005", "interval": [120, 180], "semantic_state": "confirmed_with_reservation"},
+    {"id": "FX-BKG-B-005", "owner_id": "FX-BKG-M-002", "item_id": "FX-BKG-I-004", "interval": [120, 180], "semantic_state": "confirmed_with_reservation"}
+  ],
+  "oracle_profiles": [
+    {
+      "id": "FX-BKG-O-001", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "assertions": ["The request immediately becomes a confirmed booking and reservation of the selected physical item for exactly the requested interval.", "No staff approval, separate pending stage or release-one training prerequisite is introduced; no loan is created by booking.", "The requesting member sees portal confirmation with their selected item and requested interval. Immediate does not mean an invented response-time SLA."]
+    },
+    {
+      "id": "FX-BKG-O-002", "ac_refs": ["AC-03"],
+      "assertions": ["No confirmed booking or reservation is created for the inactive member's request.", "The portal explains that active membership is required; exact wording is unspecified."]
+    },
+    {
+      "id": "FX-BKG-O-003", "ac_refs": ["AC-08"],
+      "assertions": ["No confirmed booking or reservation is created for the unverifiable member's request.", "The portal explains that eligibility could not be verified; it neither claims confirmation nor treats the outcome as proof of inactive membership. No pending booking or automatic retry is prescribed."]
+    },
+    {
+      "id": "FX-BKG-O-004", "ac_refs": ["AC-02", "AC-04"],
+      "assertions": ["The new request creates no confirmed booking or reservation and the portal explains that the requested interval is unavailable.", "All supplied baseline reservations remain unchanged, including item, owner and interval; a failed request does not displace a booking."]
+    },
+    {
+      "id": "FX-BKG-O-005", "ac_refs": ["AC-05"],
+      "assertions": ["The owner can view their existing confirmation, including its selected item and requested interval; a full history or list interface is not required."]
+    },
+    {
+      "id": "FX-BKG-O-006", "ac_refs": ["AC-05"],
+      "assertions": ["The non-owner cannot view the target member's booking details. Merely showing the booking under the correct owner's name would not satisfy this boundary.", "No access route, denial copy, status code or configured role is prescribed."]
+    },
+    {
+      "id": "FX-BKG-O-007", "ac_refs": ["AC-06"],
+      "assertions": ["Availability information presented to the viewer contains neither the other borrower's display-name probe nor contact probe, and does not substitute another representation disclosing their name or contact details.", "This checks member-visible information, not only whether a name is hidden in one UI element; no availability layout or API is assumed."]
+    },
+    {
+      "id": "FX-BKG-O-008", "ac_refs": ["AC-06"],
+      "assertions": ["The failed booking outcome presented to the requester contains neither the blocking borrower's display-name probe nor contact probe, and discloses neither name nor contact details through other member-visible outcome information."]
+    },
+    {
+      "id": "FX-BKG-O-009", "ac_refs": ["AC-02", "AC-04", "AC-07"],
+      "assertions": ["Any resulting confirmed subset satisfies no overlap and at least 30 minutes between bookings of the same physical item, including any supplied baseline.", "The scenario's maximum_confirmed is a safety upper bound, not a promised count or winning actor. Any subset respecting the invariant is allowed by this safety oracle; it does not establish liveness.", "A request that cannot be confirmed because of the competing reservation receives AC-04's unavailable explanation, creates no booking/reservation, and leaves existing reservations unchanged.", "No winner order, tie-break, retry, lock, API response, scheduler or timing mechanism is prescribed."]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "FX-BKG-S-001", "title": "Available item, active member, immediate own confirmation", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": [], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-001", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-003", "interval": [120, 180]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"]}
+    },
+    {
+      "id": "FX-BKG-S-002", "title": "Inactive membership alone prevents a clear-interval booking", "basis": "contract_backed", "ac_refs": ["AC-03"],
+      "baseline_booking_ids": [], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-002", "member_id": "FX-BKG-M-003", "item_id": "FX-BKG-I-004", "interval": [120, 180]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-002"]}
+    },
+    {
+      "id": "FX-BKG-S-003", "title": "Unverifiable membership is not inactive membership", "basis": "contract_backed", "ac_refs": ["AC-08"],
+      "baseline_booking_ids": [], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-003", "member_id": "FX-BKG-M-004", "item_id": "FX-BKG-I-005", "interval": [120, 180]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-003"]}
+    },
+    {
+      "id": "FX-BKG-S-004", "title": "Partial overlap leaves the existing booking intact", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-004", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [150, 210]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-004"]}
+    },
+    {
+      "id": "FX-BKG-S-005", "title": "Requested interval wholly inside an existing booking", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-005", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [135, 165]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-004"]}
+    },
+    {
+      "id": "FX-BKG-S-006", "title": "Requested interval encloses an existing booking", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-006", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [90, 210]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-004"]}
+    },
+    {
+      "id": "FX-BKG-S-007", "title": "Touching endpoints still have zero inspection gap", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-007", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [180, 240]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-004"], "gap_minutes": 0, "new_interval_position": "later"}
+    },
+    {
+      "id": "FX-BKG-S-008", "title": "Later interval with only 29 minutes separation", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-008", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [209, 269]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-004"], "gap_minutes": 29, "new_interval_position": "later"}
+    },
+    {
+      "id": "FX-BKG-S-009", "title": "Later interval with exactly 30 minutes separation", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-009", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [210, 270]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "gap_minutes": 30, "new_interval_position": "later"}
+    },
+    {
+      "id": "FX-BKG-S-010", "title": "Later interval with 31 minutes separation", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-010", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [211, 271]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "gap_minutes": 31, "new_interval_position": "later"}
+    },
+    {
+      "id": "FX-BKG-S-011", "title": "Earlier interval requested later, only 29 minutes separation", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-011", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [31, 91]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-004"], "gap_minutes": 29, "new_interval_position": "earlier"}
+    },
+    {
+      "id": "FX-BKG-S-012", "title": "Earlier interval requested later, exactly 30 minutes separation", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-012", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [30, 90]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "gap_minutes": 30, "new_interval_position": "earlier"}
+    },
+    {
+      "id": "FX-BKG-S-013", "title": "Earlier interval requested later, 31 minutes separation", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-013", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [29, 89]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "gap_minutes": 31, "new_interval_position": "earlier"}
+    },
+    {
+      "id": "FX-BKG-S-014", "title": "Same model, different physical item, identical interval", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-001"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-014", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-002", "interval": [120, 180]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "note": "I-001's reservation does not reserve the distinct physical unit I-002."}
+    },
+    {
+      "id": "FX-BKG-S-015", "title": "Fits between two existing bookings with 30 minutes on each side", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-002", "FX-BKG-B-003"], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-015", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-003", "interval": [150, 210]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "gap_before_minutes": 30, "gap_after_minutes": 30}
+    },
+    {
+      "id": "FX-BKG-S-016", "title": "Owner views their existing confirmation", "basis": "contract_backed", "ac_refs": ["AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-004"], "action": "view_confirmation", "viewer_id": "FX-BKG-M-002", "target_booking_id": "FX-BKG-B-004",
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-005"]}
+    },
+    {
+      "id": "FX-BKG-S-017", "title": "Another active member cannot view the owner's booking details", "basis": "contract_backed", "ac_refs": ["AC-05"],
+      "baseline_booking_ids": ["FX-BKG-B-004"], "action": "view_confirmation", "viewer_id": "FX-BKG-M-007", "target_booking_id": "FX-BKG-B-004",
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-006"]}
+    },
+    {
+      "id": "FX-BKG-S-018", "title": "Availability information protects the blocking borrower's identity", "basis": "contract_backed", "ac_refs": ["AC-06"],
+      "baseline_booking_ids": ["FX-BKG-B-005"], "action": "inspect_member_availability", "viewer_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-004", "interval": [120, 180], "protected_persona_ids": ["FX-BKG-M-002"],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-007"]}
+    },
+    {
+      "id": "FX-BKG-S-019", "title": "Gap-conflict rejection explains unavailability without naming the borrower", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04", "AC-06"],
+      "baseline_booking_ids": ["FX-BKG-B-005"], "action": "submit_request", "protected_persona_ids": ["FX-BKG-M-002"],
+      "requests": [{"id": "FX-BKG-R-019", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-004", "interval": [209, 269]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-004", "FX-BKG-O-008"], "gap_minutes": 29, "note": "This adds the outcome privacy surface; it is not a second unique boundary value."}
+    },
+    {
+      "id": "FX-BKG-S-020", "title": "Two simultaneous requests for the identical interval", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04", "AC-07"],
+      "baseline_booking_ids": [], "action": "submit_concurrently",
+      "requests": [
+        {"id": "FX-BKG-R-020A", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [120, 180]},
+        {"id": "FX-BKG-R-020B", "member_id": "FX-BKG-M-005", "item_id": "FX-BKG-I-001", "interval": [120, 180]}
+      ],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-009"], "maximum_confirmed": 1, "winning_request_id": null}
+    },
+    {
+      "id": "FX-BKG-S-021", "title": "Simultaneous non-overlapping requests still conflict at a 29-minute gap", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04", "AC-07"],
+      "baseline_booking_ids": [], "action": "submit_concurrently",
+      "requests": [
+        {"id": "FX-BKG-R-021A", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [120, 180]},
+        {"id": "FX-BKG-R-021B", "member_id": "FX-BKG-M-005", "item_id": "FX-BKG-I-001", "interval": [209, 269]}
+      ],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-009"], "maximum_confirmed": 1, "winning_request_id": null, "gap_minutes": 29}
+    },
+    {
+      "id": "FX-BKG-S-022", "title": "Three concurrent requests require a compatible subset, not a global one-winner rule", "basis": "contract_backed", "ac_refs": ["AC-02", "AC-04", "AC-07"],
+      "baseline_booking_ids": [], "action": "submit_concurrently",
+      "requests": [
+        {"id": "FX-BKG-R-022A", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [0, 60]},
+        {"id": "FX-BKG-R-022B", "member_id": "FX-BKG-M-005", "item_id": "FX-BKG-I-001", "interval": [89, 149]},
+        {"id": "FX-BKG-R-022C", "member_id": "FX-BKG-M-006", "item_id": "FX-BKG-I-001", "interval": [180, 240]}
+      ],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-009"], "maximum_confirmed": 2, "winning_request_id": null, "incompatible_request_pairs": [["FX-BKG-R-022A", "FX-BKG-R-022B"]], "note": "A/B gap 29; B/C gap 31; A/C gap 120. A+C or B+C are compatible pairs, not required winners. A+B is forbidden even though the count would be two."}
+    },
+    {
+      "id": "FX-BKG-S-023", "title": "Simultaneous distinct physical items have no cross-item reservation conflict", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": [], "action": "submit_concurrently",
+      "requests": [
+        {"id": "FX-BKG-R-023A", "member_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-001", "interval": [120, 180]},
+        {"id": "FX-BKG-R-023B", "member_id": "FX-BKG-M-005", "item_id": "FX-BKG-I-002", "interval": [120, 180]}
+      ],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "oracle_application": "Apply the success oracle to each request independently under the contract premises; not an AC-07 conflicting-request case."}
+    },
+    {
+      "id": "FX-BKG-S-024", "title": "Active membership is sufficient without training evidence", "basis": "contract_backed", "ac_refs": ["AC-01", "AC-02", "AC-05"],
+      "baseline_booking_ids": [], "action": "submit_request",
+      "requests": [{"id": "FX-BKG-R-024", "member_id": "FX-BKG-M-008", "item_id": "FX-BKG-I-002", "interval": [120, 180]}],
+      "expected": {"oracle_profile_ids": ["FX-BKG-O-001"], "note": "No training account, grant or state machine is created or assumed."}
+    },
+    {
+      "id": "FX-BKG-S-025", "title": "Permitted date and interval selections need policy", "basis": "exploratory_blocked", "ac_refs": [], "question_refs": ["OQ-01"],
+      "baseline_booking_ids": [], "action": "clarify_policy_before_designing_calendar_cases", "persona_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-003",
+      "probe": "Ask about past/future dates, equal or reversed endpoints, selection precision and operating hours; these are questions, not approved validation partitions.",
+      "expected": null, "blocked_on": "Maya and a confirmed time-zone owner must define permitted selections; no accepted expected business outcome is supplied."
+    },
+    {
+      "id": "FX-BKG-S-026", "title": "Local clock ambiguity and DST cannot inherit the minute-axis oracle", "basis": "exploratory_blocked", "ac_refs": [], "question_refs": ["OQ-01"],
+      "baseline_booking_ids": [], "action": "clarify_clock_mapping", "persona_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-003",
+      "probe": "Hypothetical repeated or skipped local 01:30, with no selected date or jurisdiction. Determine the business zone, ambiguity handling and how instants map to the gap before specifying outcomes.",
+      "expected": null, "blocked_on": "Maya and a confirmed time-zone owner; neither local-clock validity nor DST gap arithmetic is approved."
+    },
+    {
+      "id": "FX-BKG-S-027", "title": "Damage report plus a full inspection gap does not establish availability", "basis": "exploratory_blocked", "ac_refs": [], "question_refs": ["OQ-05"],
+      "baseline_booking_ids": [], "action": "clarify_equipment_condition", "persona_id": "FX-BKG-M-001", "item_id": "FX-BKG-I-006", "hypothetical_gap_minutes": 30,
+      "probe": "Would this reported-damage condition prevent booking, and what evidence and authority could restore availability? No prior return or clearance event is presumed.",
+      "expected": null, "blocked_on": "Maya must define condition availability and clearance policy. Thirty minutes alone is not damage clearance."
+    },
+    {
+      "id": "FX-BKG-S-028", "title": "Selected membership fixture outcome is not authoritative integration evidence", "basis": "exploratory_blocked", "ac_refs": [], "question_refs": ["OQ-02"],
+      "baseline_booking_ids": [], "action": "clarify_membership_evidence", "persona_id": "FX-BKG-M-004", "item_id": "FX-BKG-I-005",
+      "probe": "Identify the authoritative membership source, verification mechanics and freshness evidence; do not invent service failures, endpoint codes or cache policy. Once inability to verify is established, S-003 already supplies AC-08's outcome.",
+      "expected": null, "blocked_on": "Aisha, with Maya on exceptions; no expected service-level business outcome or override is inferred."
+    }
+  ]
+}
