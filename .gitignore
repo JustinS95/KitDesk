@@ -1,0 +1,3 @@
+# Keep local integration manifests/checkpoints and publishing recovery records private.
+/integrations/*
+!/integrations/README.md
