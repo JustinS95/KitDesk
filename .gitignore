@@ -1,3 +1,9 @@
 # Keep local integration manifests/checkpoints and publishing recovery records private.
 /integrations/*
 !/integrations/README.md
+
+# Local planning handoffs and internal skill trials are not portfolio evidence.
+/artifacts/plans/
+/evaluation/01-discovery-intake/
+/evaluation/02-writing-user-stories/
+/evaluation/03-writing-acceptance-criteria/

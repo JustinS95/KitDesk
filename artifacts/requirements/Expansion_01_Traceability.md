@@ -1,5 +1,25 @@
 # Expansion 01: where each candidate behavior came from
 
+## Current demo readiness overlay — 2026-10-18
+
+The v1 derivation tables below are preserved **historical baseline**, including then-open questions, unchanged-v2 and then-unpublished claims. They are not current status. [DD-01–08](../discovery/Demo_Readiness_Decisions_20261018.md#question-closure-ac-propagation-and-readiness) were approved by the user on 2026-10-18 with “looks good. You may proceed”, as fictional role-play decisions, not real stakeholder research. That closure table maps every selected story's historical blockers to decisions and current AC supplements. Original FX/SRC sources remain unchanged; UD-01–08 retain precedence. Current story scopes remove obsolete pending claims; original AC identities and behavior are retained, with former search/contact deferrals in KD002/005 now pointing to approved supplements.
+
+| Story | Original AC identities retained | Current added AC / decision coverage | Local requirements status |
+|---|---|---|---|
+| KD-ST-001 | AC-01–08 | AC-09–12 → DD-01/02/03/05/06/08 | Ready |
+| KD-ST-002 | AC-01–04 | AC-05–08 → DD-01/03/05/06/08 | Ready |
+| KD-ST-003 | AC-01–04 | AC-05–07 → DD-01/04/05/06/08 | Ready |
+| KD-ST-005 | AC-01–04 | AC-05–08 → DD-01/04/05/06/08 | Ready |
+| KD-ST-006 | AC-01–04 | AC-05–09 → DD-01/02/03/04/05/07/08 | Ready |
+| KD-ST-007 | AC-01–03 | AC-04–06 → DD-01/03/05/06/07/08 | Ready |
+| KD-ST-008 | AC-01–04 | AC-05–08 → DD-01/05/06/07/08 | Ready |
+
+KD-ST-004/009/010/011/012 remain Backlog; their specific unresolved service/policy scope is listed in the current backlog. Shared decisions may partially answer their historical questions but do not make their workflows Ready. Known fixture records can support read-story validation without these deferred mutation workflows implemented. All checkboxes remain unchecked. No implementation or executed tests are implied. Historical integration records are immutable.
+
+Publication snapshot — **2026-10-18T14:28:46Z**: the seven revised public Issue bodies for KD-ST-001/002/003/005/006/007/008 and their Ready statuses were verified on [Project 3](https://github.com/users/JustinS95/projects/3); the five deferred Issues remained Backlog. This supersedes the earlier all-Backlog observation, not historical review findings. Repository documentation publication remains pending. This is not a real-time guarantee or evidence of implementation or executed tests.
+
+## Historical v1 derivation follows
+
 The practical distinction is simple: “recorded returned” answers who still has the tool; “condition case cleared” answers what happened to a particular concern. Neither answers every question about the next booking. This trace keeps those facts, the actual user decisions and the fictional extension premises separate.
 
 Version 1. **Local derivation record, pending user review—not approved requirements or test evidence.** The [backlog guide](../stories/EXPANDED_BACKLOG.md) provides the journey before the matrices; the [discovery synthesis](../discovery/Expansion_01_Discovery_Synthesis.md) carries conflicts and consultation questions. Canonical story bodies stay only in `artifacts/stories/`.

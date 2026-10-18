@@ -1,5 +1,34 @@
 # KitDesk expansion: keep the promise, possession and condition distinct
 
+**Historical v1 synthesis with current disposition.** The user approved fictional DD-01–08 on 2026-10-18 with “looks good. You may proceed”. These role-play decisions now resolve the scoped blockers of KD-ST-001/002/003/005/006/007/008, with canonical story resolution tables and AC. Five remain Backlog. Approval is not a real stakeholder meeting, implementation or test result. Original FX sources and historical reviews remain unchanged.
+
+Publication snapshot — **2026-10-18T14:28:46Z**: the seven revised public Issue bodies for KD-ST-001/002/003/005/006/007/008 and their Ready statuses were verified on [Project 3](https://github.com/users/JustinS95/projects/3); the five deferred Issues remained Backlog. This supersedes the earlier all-Backlog observation. Repository documentation publication remains pending. This is not a real-time guarantee or evidence of implementation or executed tests.
+
+## Current question disposition — 2026-10-18
+
+Question IDs below refer to the preserved [FX register](../../sources/expansion-01/README.md). A scoped answer does not close unrelated workflows or prove a working dependency. The [checkpoint closure table](Demo_Readiness_Decisions_20261018.md#question-closure-ac-propagation-and-readiness) links the seven canonical stories and AC; its [review supersession](Demo_Readiness_Decisions_20261018.md#provenance-and-historical-review-supersession) preserves the earlier technical findings as history.
+
+| Historical reference | Current bounded answer | Still unresolved or unverified |
+|---|---|---|
+| FX-Q01; KD001 OQ-01 | DD-01 sets Europe/London, instants, DST, interval validation and queue start inclusion | Time implementation/verification; cancellation cutoff remains unchosen |
+| FX-Q02 / FX-C02 | DD-04 first completed transition wins; preparation gives no lock; missed booking stays confirmed/uncollected | KD004 cancellation eligibility/cutoff and no-show remedies |
+| FX-Q03 / FX-C03; KD001 OQ-05 | DD-03 consumes explicit lendable/unrestricted/no-outstanding-loan facts; unknown fails closed; receipt/case clearance is not qualification | KD009/010 qualification establishment/restoration, inspection authority/evidence and corrections |
+| FX-Q04/05 / FX-C04; KD001 OQ-02 | DD-02 authoritative member-reference link, operation-current check at booking/handover, active only; inactive/unknown fail closed | Actual adapter, identity/freshness/enforcement or controlled fakes; no live evidence |
+| FX-Q06 / FX-C05 | DD-07 explicit due fact from resolved booking end at handover; never guessed/backfilled | KD011 overdue threshold, grace, disputes and classification |
+| FX-Q07 | No notification delivery adopted | Events, channels, recipients, consent and failure policy if later requested |
+| FX-Q08 / FX-C06 | No reviewer authority supplied by DD-03's consumption rule | KD010 actual designation, evidence, clearance/reversal |
+| FX-Q09 | DD-03/05 prevent receipt-as-clearance and internal-assessment exposure in KD007 | KD009 physical mismatch/partial kit/correction and disputed-condition service |
+| FX-Q10 | DD-05 exhaustive seven-story fields and task access; DD-06 365-day visible history, outstanding lifetime and stale-view rechecks | Deferred capture/assessment/follow-up contexts; physical deletion, legal holds and real compliance policy |
+| FX-Q11 | DD-08 bounded descriptive/keyboard/focus/text interaction for seven stories | Participant research, formal conformance and usability testing, not claimed complete |
+| FX-Q12 | DD-04 exact collection window/card/asset matching; no proxy/substitute/walk-in/extension right | No-show remedies and future-booking arrangements remain deferred |
+| FX-Q13 | DD-05 permits inert, same-borrower reported-content context in KD008 only | KD012 capture/moderation/urgency/response service |
+| FX-Q14 | No launch priority, quantified benefit or release approval inferred | Scope prioritization and measurement |
+| M01 / O03 / O02 / M04-D04 gaps | DD-06 exact catalog and borrower-reference matching/order/read states; DD-04 identity/timing; DD-05 fields | Engineering and future validation, not open seven-story defaults; report capture limits/repetition/editing stay KD012 |
+
+## Historical v1 synthesis follows
+
+All statements below describe the original derivation, including then-open questions and then-unpublished claims. They do not override the current disposition above.
+
 A member reserves a particular drill, the desk records when it actually leaves, and staff later record that it came back. If it comes back damaged, the member need not remain recorded as possessing it while a reviewer assesses the concern. If the member reports a noise before returning it, that report is useful desk context—not receipt, proven damage or a guaranteed response.
 
 This is the desired connected journey behind the [local candidate backlog](../stories/EXPANDED_BACKLOG.md). It expands the material available for BA/QA exercises without pretending the unresolved decisions have been made.
@@ -15,7 +44,7 @@ Authority order for this bounded synthesis:
 3. Invented wishes, design suggestions, conflicts and FX-Q questions remain proposals/unknowns. Later detail or apparent fictional consensus supplies no approval.
 4. Historical SRC statements remain historical, including approval language in project context. That discrepancy is not silently rewritten.
 
-No binding public API, exact message, layout or interaction contract is established. The source design is text, not an inspected interface. The existing story README's “no stories” statement is historical stale text; the actual store contains KD-ST-001. That README is outside this task's edit authority and remains unchanged.
+No binding public API, exact message, layout or interaction contract was established by the v1 sources. The source design is text, not an inspected interface. The v1 review recorded stale “no stories” navigation; current navigation is corrected without changing that historical review finding.
 
 ## Preserved user decisions
 

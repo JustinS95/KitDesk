@@ -1,7 +1,11 @@
 # Review my bookings and what happened to them
 
-Local reference: **KD-ST-003**. Candidate pending user review, version 1.
-Maturity: **draft complete under stated fixture premises** for bounded retrieval, not implementation or board readiness.
+Local reference: **KD-ST-003**. Version 2, 2026-10-18.
+Maturity: **Ready — fictional requirements only**, not implemented/tested; public publication snapshot below.
+
+Current authority: [user-approved fictional decisions DD-01–08](../discovery/Demo_Readiness_Decisions_20261018.md), approved 2026-10-18 with “looks good. You may proceed”. Historical v1 questions retain their original impacts; the current resolution table supersedes them for this scope.
+
+Publication snapshot — **2026-10-18T14:28:46Z**: seven revised public Issue bodies, including [KD-ST-003 (#4)](https://github.com/JustinS95/KitDesk/issues/4), and their Ready statuses were verified on [Project 3](https://github.com/users/JustinS95/projects/3); five deferred Issues remained Backlog. Repository documentation publication remains pending. This is not a real-time guarantee or evidence of implementation or executed tests.
 
 ## Summary and value
 
@@ -11,7 +15,7 @@ For example, a collected drill booking should lead to its actual loan, not imply
 
 ## Scope and authority
 
-Own list/detail retrieval extends KD-ST-001's immediate confirmation. FX-R03 is an **author-defined synthetic premise, review pending**. The lifecycle concepts below are not exact labels or an exhaustive state model. Cancellation execution belongs to KD-ST-004; handover belongs to KD-ST-006. No editing, rebooking, auto-expiry, approval, notification or retention duration is added.
+Own list/detail retrieval extends KD-ST-001's immediate confirmation. FX-R03 is adopted as refined by DD-04/05/06/08; AC-05–07 specify exact fields, known outcomes, visible-history window and interaction. Cancellation execution belongs to KD-ST-004; handover belongs to KD-ST-006. No editing, rebooking, auto-expiry, approval, notification or physical-deletion workflow is added.
 
 ## Acceptance criteria
 
@@ -24,7 +28,7 @@ Own list/detail retrieval extends KD-ST-001's immediate confirmation. FX-R03 is 
 
 Local record prerequisite: KD-ST-001 creates confirmed bookings. Cancelled/collected examples additionally consume outcomes from KD-ST-004/006; those branches can use explicitly assumed records for draft review rather than requiring every workflow before retrieval work starts. The loan destination is KD-ST-007. These are record relationships, not approved implementation order.
 
-## Open questions
+## Historical v1 open questions — current resolutions below
 
 | Reference | Question / fictional owner | Scoped impact |
 |---|---|---|
@@ -34,3 +38,16 @@ Local record prerequisite: KD-ST-001 creates confirmed bookings. Cancelled/colle
 ## Traceability
 
 Coverage classification: **New** retrieval/list scope; existing own-confirmation privacy is **Covered** by KD-ST-001 AC-05/06 and preserved here across history. AC-01–04 map to FX-R03, FX-SRC-02 § M03; AC-04 also uses the bypass boundary in SRC-06 § A01 via FX-SRC-06 § X06. See [expanded traceability](../requirements/Expansion_01_Traceability.md). All criteria remain unchecked; no access enforcement has been verified.
+
+## Current demo decisions, AC and readiness — v2
+
+- [ ] **AC-05 — Exact retained own-record view.** Apply DD-05's exhaustive KD003 field list and DD-06's 365-elapsed-day booking window, boundary exclusion and requested-start descending/reference ascending ordering, showing all visible own records. Own outstanding-loan context may still resolve its linked booking under DD-06 after the ordinary history window. Show absent optional facts as not recorded, not invented. Inactive membership does not itself prevent authenticated own-record reading.
+- [ ] **AC-06 — Known lifecycle, not a guessed no-show.** Display Confirmed, Cancelled or Collected from known transitions under DD-04. A missed interval stays confirmed/uncollected absent an actual transition; do not invent a loan, expiry, cancellation or collection right. A first completed competing transition is reflected consistently with its linked loan; reading causes no transition. Cancelled/collected fixtures may supply these branches without implementing cancellation/return workflows.
+- [ ] **AC-07 — Bounded interaction.** Apply DD-08 and DD-01's zone/offset display; all member retrieval, links and empty/unavailable outcomes preserve AC-03/04's own-record protection, including bypassed controls. No staff contacts, internal notes or fields outside DD-05 appear.
+
+| Historical question | Current simulated resolution | AC trace |
+|---|---|---|
+| FX-Q10 | DD-05 exact fields; DD-06 visible retention and boundary | AC-01/04/05/07 |
+| FX-Q02 | DD-04 known states and no automatic no-show transition | AC-02/06; cancellation eligibility remains KD004 Backlog |
+
+FX-R03 is adopted for this bounded read story as refined above. **Ready** requirements; authentication/records/link implementation and explicit lifecycle fixtures remain prerequisites to future validation. No physical deletion, archive administration or indefinite-history promise is added.

@@ -1,11 +1,9 @@
-# Integration staging
+# Public tracking and local recovery
 
-No live ADO, Figma, membership service, email account or deployment target is configured. Do not discover real accounts or create remote objects as part of an offline exercise.
+The public [KitDesk repository](https://github.com/JustinS95/KitDesk) and [Project 3](https://github.com/users/JustinS95/projects/3) track the fictional requirements. Verification at **2026-10-18T14:28:46Z** recorded seven updated Issue bodies with Ready status and five unchanged Issues in Backlog. See the [story/Issue snapshot](../README.md#board-snapshot); this is not a live board guarantee or evidence of implemented software.
 
-`../sources/tracking/board-snapshot.md` is synthetic and its SIM labels must never be used as remote IDs. Future integration testing requires the user to select the exact sandbox, operation scope and supported capabilities.
+The [source board snapshot](../sources/tracking/board-snapshot.md) is synthetic; its SIM labels are not remote IDs. No application membership service, ADO, Figma, email account or deployment target is configured.
 
-After authorization, retain each exact plan and its verification/recovery records in a new operation-specific folder. Keep remote identities and local story references distinct. No credentials or auth headers belong in this playground.
+Operation plans, staged bodies, manifests, checkpoints and recovery records remain in the local authoring workspace, not this public repository. Only this README is tracked under `integrations/`; no run folders are needed to read the portfolio. No credentials or authentication headers belong here.
 
-## Public-copy boundary
-
-Publication derivative: operation-specific manifests, bodies, checkpoints and publication reports remain in the original local workspace. They are intentionally excluded from this repository, not missing demo dependencies. The public example is [Issue #1](https://github.com/JustinS95/KitDesk/issues/1); historical membership summaries are not a fresh board check. See [publication notes](../PUBLICATION_NOTES.md). Only this README is tracked under `integrations/`.
+Any future remote operation needs explicit approval of its exact target and scope, with local verification and recovery evidence retained. Publishing documents does not authorize Issue edits, board moves or application integration. See [publication notes](../PUBLICATION_NOTES.md).
