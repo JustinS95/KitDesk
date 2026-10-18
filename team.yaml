@@ -1,0 +1,14 @@
+project: KitDesk
+repo:
+  provider: github
+  host: github.com
+  owner: JustinS95
+  name: KitDesk
+  url: https://github.com/JustinS95/KitDesk
+tracking:
+  provider: github
+  user: JustinS95
+  project_number: 3
+  project_url: https://github.com/users/JustinS95/projects/3
+stories:
+  registry_root: artifacts/stories

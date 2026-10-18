@@ -4,11 +4,11 @@ Status: fictional baseline for practice, version 1. No application has been impl
 
 ## Historical baseline and current authority
 
-The version 1 narrative below is retained as historical context, including its original staff-approval proposal. It is not the current booking policy where later **actual user role-play decisions** explicitly supersede it. Read [UD-01–UD-04](../artifacts/discovery/Discovery_Summary_KitDesk_20261016.md#user-role-play-decisions--2026-10-16), [UD-05–UD-08](../artifacts/discovery/Booking_Decisions_AC_Trial_20261016.md) and the unchanged canonical [KD-ST-001 v2](../artifacts/stories/KD-ST-001-book-available-equipment.md).
+The version 1 narrative below is retained as historical context, including its original staff-approval proposal. It is not current policy where later **actual user role-play decisions** explicitly supersede it. Read [UD-01–UD-04](../artifacts/discovery/Discovery_Summary_KitDesk_20261016.md#user-role-play-decisions--2026-10-16), [UD-05–UD-08](../artifacts/discovery/Booking_Decisions_AC_Trial_20261016.md), the user-authorized [simulated demo decision checkpoint DD-01–08](../artifacts/discovery/Demo_Readiness_Decisions_20261018.md) and canonical [KD-ST-001 v3](../artifacts/stories/KD-ST-001-book-available-equipment.md). DD decisions settle the fictional demo only, not real stakeholder evidence.
 
 Current confirmed booking behavior is immediate confirmation and reservation without staff approval or a pending stage. Active membership suffices for membership/training eligibility; training checks are excluded. Reservations of the same physical item must not overlap and need at least 30 minutes between them in either request order, including exactly 30 minutes. Inactive or unverifiable membership, or an unavailable interval, prevents the new booking with an explanation. Own-record and borrower-privacy boundaries apply. Booking is not actual handover or a loan; the gap does not clear damaged equipment.
 
-The [Expansion 01 pack](../sources/expansion-01/README.md) adds **invented interviews and author-defined, review-pending premises**, not new user or stakeholder approval. Its detail cannot settle canonical date/time, membership-dependency or equipment-condition questions. See the [source index](../sources/INDEX.md), [expansion synthesis](../artifacts/discovery/Expansion_01_Discovery_Synthesis.md) and [backlog index](../artifacts/stories/EXPANDED_BACKLOG.md) for provenance and current candidate/readiness status, not an assumed Ready count. No application or provisioned test environment is established.
+The [Expansion 01 pack](../sources/expansion-01/README.md) contains **invented interviews and originally provisional author-defined premises**, not real stakeholder evidence. That pack alone does not settle questions. The user-approved DD checkpoint adopts concrete Europe/London/DST, operation-current active-membership/fail-closed, explicit item-qualification, handover identity/time/race, fields, read retention, search and due-fact rules. **Seven requirements stories are Ready: KD-ST-001/002/003/005/006/007/008. Five remain Backlog: KD-ST-004/009/010/011/012.** The seven revised public Issue bodies and this exact Status partition were verified on [Project 3](https://github.com/users/JustinS95/projects/3) at completion on **2026-10-18T14:28:46Z**, not guaranteed in real time. Repository documentation publication remains pending; no application or tests exist. See the [source index](../sources/INDEX.md), historical [expansion synthesis](../artifacts/discovery/Expansion_01_Discovery_Synthesis.md), current [backlog index](../artifacts/stories/EXPANDED_BACKLOG.md) and [public Issue mapping](../artifacts/discovery/Demo_Readiness_Decisions_20261018.md#public-issue-and-board-publication). Real adapters, accounts and access enforcement remain engineering prerequisites; known qualification/loan/receipt/report fixtures can support future read-story validation without deferred mutation workflows implemented.
 
 ## Problem and desired outcomes
 
@@ -32,7 +32,7 @@ Explicitly excluded from this scenario's first release: payments/fines, purchasi
 | Membership administrator / Aisha Reed | Manages membership information | Membership eligibility and personal-data visibility |
 | Technical lead / Sam Ortiz | Advises delivery | Engineering conventions, not unilateral business policy |
 
-Names are role-play characters, not actual users. No email addresses, account identities, assignees or mention identifiers are configured. Ask the user to role-play the appropriate owner when resolving a decision. Do not claim a character approved a new decision without that response.
+Names are role-play characters, not actual users. No email addresses, account identities, assignees or mention identifiers are configured. The user reviewed and approved author-supplied DD-01–08 on 2026-10-18 with “looks good. You may proceed”, adopting those rules for the fictional demo, not claiming characters or real stakeholders attended or approved a meeting. New decisions still require explicit user role-play approval. Root [team.yaml](../team.yaml) records project/repository/tracking/store context, not an operational roster or assignment.
 
 ## Vocabulary
 
@@ -40,7 +40,8 @@ Names are role-play characters, not actual users. No email addresses, account id
 - **Booking request:** a member's request to use one item over a requested interval.
 - **Loan:** the actual handover-to-return record. A booking and a loan are not interchangeable.
 - **Desk coordinator:** operational staff role; not automatically an administrator.
-- **Overdue:** a business concept whose exact clock, time zone and threshold remain open.
+- **Due obligation:** explicit loan fact recorded from the resolved booking-end instant at handover under DD-07; no recalculation or extension.
+- **Overdue:** a separate classifier whose threshold/grace/disputes remain open on KD-ST-011. DD-01 establishes the demo zone/DST, not an overdue policy.
 
 ## Evidence conventions
 
